@@ -10,6 +10,8 @@ const AppError = require("./utils/errorHandling")
 const errorController = require("./controllers/errorController")
 
 const authRoutes = require("./routes/authRoutes")
+const userRoutes = require("./routes/userRoutes")
+const productRoutes = require("./routes/productRoutes")
 
 mongooseConnect(process.env.MONGO_URI)
 
@@ -19,6 +21,8 @@ app.use(bodyparser.json())
 app.use(morgan("dev"))
 
 app.use("/api/auth", authRoutes)
+app.use("/api/user", userRoutes)
+app.use("/api/product", productRoutes)
 
 app.all("*", (req, res, next) => {
 	next(new AppError("Cannot find the route you are looking for.", 404))

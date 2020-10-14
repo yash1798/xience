@@ -26,6 +26,7 @@ const userSchema = new mongoose.Schema(
 				pincode: { type: Number, required: true },
 			},
 		],
+
 		isAdmin: {
 			type: Boolean,
 			default: false,

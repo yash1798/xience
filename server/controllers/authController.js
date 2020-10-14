@@ -16,7 +16,10 @@ exports.signup = catchAsync(async (req, res, next) => {
 		name,
 		hashed_password,
 	})
-	res.json({ status: "success", payload: user })
+	res.json({
+		status: "success",
+		payload: "Sign Up completed.",
+	})
 })
 
 exports.signin = catchAsync(async (req, res, next) => {

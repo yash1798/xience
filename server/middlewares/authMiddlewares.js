@@ -1,8 +1,11 @@
 const { body, validationResult } = require("express-validator")
 
-const AppError = require("../utils/errorHandling")
+const dotenv = require("dotenv")
+dotenv.config()
 
+const AppError = require("../utils/errorHandling")
 const User = require("../models/userModel")
+const catchAsync = require("../utils/catchAsync")
 
 const signupValidationRules = () => {
 	return [
