@@ -1,0 +1,46 @@
+.button {
+	outline: none;
+	text-decoration: none;
+	width: 7rem;
+	height: 3rem;
+	font-size: 1.5rem;
+	border: none;
+	color: white;
+	transition: all 0.2s ease-in;
+}
+
+.btn-trans {
+	background-color: transparent;
+}
+
+.btn-trans:hover {
+	transform: scale(1.2);
+}
+
+.btn-white {
+	background-color: white;
+	color: black;
+}
+
+.btn-black {
+	background-color: black;
+	color: white;
+}
+
+.btn-wo {
+	border: 2px solid white;
+}
+
+.btn-bo {
+	border: 2px solid black;
+}
+
+.btn-white:hover {
+	background-color: black;
+	color: white;
+}
+
+.btn-black:hover {
+	background-color: white;
+	color: black;
+}

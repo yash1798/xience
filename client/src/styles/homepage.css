@@ -1,0 +1,9 @@
+.homepage {
+	position: relative;
+}
+
+.homepage .carousel .carousel-indicators {
+	position: absolute;
+	bottom: 3rem;
+	left: 3rem;
+}
