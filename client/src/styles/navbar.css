@@ -1,0 +1,122 @@
+.navbar {
+	position: absolute;
+	top: 1rem;
+	left: 0;
+	height: 3rem;
+	z-index: 10;
+	background-color: transparent;
+	color: black;
+	padding-top: 1rem;
+}
+
+.navbar .topbar {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: flex-end;
+	width: 100vw;
+}
+
+.navbar .topbar .navigation img {
+	width: 3rem;
+	height: 3rem;
+	transform: translateY(-1rem);
+	filter: invert(0%) sepia(11%) saturate(7495%) hue-rotate(255deg)
+		brightness(93%) contrast(97%);
+	cursor: pointer;
+	margin-left: 1rem;
+}
+
+.navbar .topbar .logo {
+	font-family: Prata;
+	font-family: 300;
+	font-size: 4rem;
+	margin: 0 4rem;
+	transform: translateX(-30rem);
+}
+
+.navbar .topbar h3 {
+	transform: translateX(20rem);
+	align-self: flex-end;
+}
+
+.navbar .cart {
+	width: 3rem;
+	height: 3rem;
+	transform: translateX(-5rem);
+	cursor: pointer;
+}
+
+/*--------------SIDEBAR-------------*/
+
+.navbar .navigation {
+	display: flex;
+}
+
+.navbar .navigation .sidebar {
+	width: 20vw;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 100;
+	background-color: white;
+	padding: 3rem;
+	transform: translateX(-30vw);
+	height: 100vh;
+	transition: all 0.5s ease-out;
+}
+
+.navbar .navigation .show {
+	transform: translateX(0);
+}
+
+.navigation .sidebar .cross {
+	transform: translateY(-4rem);
+}
+
+.navigation .sidebar h1 {
+	font-size: 3rem;
+	font-weight: 700;
+	margin-top: 5rem;
+}
+
+.navigation .sidebar .sidebar-category {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.navigation .sidebar .sidebar-category h1 {
+	font-size: 3rem;
+	margin-top: 2rem;
+	font-weight: 300;
+	border-bottom: 2px solid white;
+	text-align: center;
+	width: 9rem;
+	height: 4rem;
+	padding-bottom: 0.2rem;
+	cursor: pointer;
+	margin-bottom: 1rem;
+}
+
+.navigation .sidebar .sidebar-category h1:hover {
+	border-bottom: 1px solid black;
+}
+
+.sidebar-links {
+	display: none;
+}
+
+.navigation .sidebar .sidebar-category .sidebar-links h4 {
+	border-bottom: 0.7px solid white;
+}
+
+.navigation .sidebar .sidebar-category .sidebar-links h4:hover {
+	border-bottom: 0.7px solid black;
+	cursor: pointer;
+}
+
+.active {
+	display: block;
+}

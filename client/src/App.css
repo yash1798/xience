@@ -7,6 +7,7 @@
 
 .App {
 	text-align: center;
+	position: relative;
 }
 
 .text-white {
@@ -15,4 +16,14 @@
 
 .text-black {
 	color: black;
+}
+
+.link {
+	text-decoration: none;
+	color: inherit;
+}
+
+.link:hover {
+	text-decoration: none;
+	color: inherit;
 }

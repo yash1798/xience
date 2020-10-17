@@ -1,0 +1,39 @@
+.xinc-homepage {
+	height: 100vh;
+	width: 100vw;
+	background-image: url("../assets/img/Homepage_Xinc.jpg");
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.xinc-homepage .hero-content {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	transform: translateX(3rem);
+	color: white;
+}
+
+.xinc-homepage p {
+	font-size: 7rem;
+}
+
+.xinc-homepage h1 {
+	color: white;
+	font-size: 15rem;
+	/* transform: translateY(rem); */
+	font-family: Prata;
+}
+.xinc-homepage h4 {
+	font-size: 2rem;
+	font-family: Rajdhani;
+}
+
+.xinc-homepage .xinc-buttons {
+	/* transform: translateY(rem); */
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+}
