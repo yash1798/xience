@@ -14,25 +14,27 @@
 	align-items: center;
 	transform: translateX(3rem);
 	color: white;
+	height: 80vh;
 }
 
 .xinc-homepage p {
-	font-size: 7rem;
+	font-size: 10rem;
+	transform: translateY(5rem);
 }
 
 .xinc-homepage h1 {
 	color: white;
 	font-size: 15rem;
-	/* transform: translateY(rem); */
 	font-family: Prata;
 }
 .xinc-homepage h4 {
 	font-size: 2rem;
 	font-family: Rajdhani;
+	transform: translateY(-2rem);
 }
 
 .xinc-homepage .xinc-buttons {
-	/* transform: translateY(rem); */
+	transform: translateY(-3rem);
 	width: 100%;
 	display: flex;
 	justify-content: space-around;

@@ -3,7 +3,7 @@ import Slider from "react-slick"
 
 import PrevArrow from "../representational/PrevArrow"
 import NextArrow from "../representational/NextArrow"
-import CategoryCollection from "../representational/Category_Collection"
+import CategoryCollection from "../functionals/Category_Collection"
 
 import radio from "../../assets/svg/radio.svg"
 import top from "../../assets/img/HomePage_Female_top.jpg"

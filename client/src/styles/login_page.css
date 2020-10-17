@@ -1,0 +1,19 @@
+.login-page {
+	display: flex;
+	justify-content: space-around;
+	width: 70vw;
+	margin: 10rem auto;
+	flex-wrap: wrap;
+}
+
+.login-page .login-section {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	height: 40vh;
+}
+
+.login-page .login-section h1 {
+	font-size: 3rem;
+}

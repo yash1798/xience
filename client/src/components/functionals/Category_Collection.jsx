@@ -1,7 +1,7 @@
 import React from "react"
 
 import "../../styles/category_collection.css"
-import Button from "./Button"
+import Button from "../representational/Button"
 
 const CategoryCollection = ({ picture, header, text, theme }) => {
 	return (
@@ -10,7 +10,7 @@ const CategoryCollection = ({ picture, header, text, theme }) => {
 			<div className={`hero-content ${theme}`}>
 				<h1>{header}</h1>
 				<p>{text}</p>
-				<Button theme="trans" outline="wo">
+				<Button width="8rem" theme="trans" outline="wo">
 					VIEW
 				</Button>
 			</div>
