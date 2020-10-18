@@ -11,9 +11,15 @@
 	flex-direction: column;
 	justify-content: space-between;
 	align-items: center;
-	height: 40vh;
+	height: 50vh;
+	width: 50%;
 }
 
-.login-page .login-section h1 {
+.login-page p {
+	font-size: 2rem;
+	margin-bottom: 2rem;
+}
+
+.login-page h1 {
 	font-size: 3rem;
 }

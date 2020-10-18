@@ -1,11 +1,13 @@
 import React, { Component } from "react"
+import { Link } from "react-router-dom"
+
+import Input from "../representational/Input"
 
 import menu from "../../assets/svg/menu.svg"
 import cart from "../../assets/svg/cart-bag.svg"
 import cross from "../../assets/svg/cross.svg"
 
 import "../../styles/navbar.css"
-import { Link } from "react-router-dom"
 
 export default class Navbar extends Component {
 	renderLinks = (category) => {
@@ -95,6 +97,10 @@ export default class Navbar extends Component {
 					<Link className="link" to="/">
 						<h1 className="logo">XiNC</h1>
 					</Link>
+					<div className="search-input">
+						<h2>SEARCH</h2>
+						<Input width="10rem" height="4rem" />
+					</div>
 					<Link className="link" to="/login">
 						<h3>LOG IN</h3>
 					</Link>

@@ -2,11 +2,31 @@ import React from "react"
 
 import "../../styles/input.css"
 
-const Input = ({ type, name, children, height, width }) => {
+const Input = ({
+	type,
+	name,
+	children,
+	placeholder,
+	width,
+	height,
+	value,
+	onChange,
+}) => {
+	placeholder = placeholder || ""
+	value = value || ""
+	height = height || "5rem"
+
 	return (
-		<div className="input" style={{ width: `${width}` }}>
-			<input name={`${name}`} type={`${type}`} required />
-			<label for={`${name}`}>
+		<div className="input" style={{ width: `${width}`, height: `${height}` }}>
+			<input
+				placeholder={`${placeholder}`}
+				name={`${name}`}
+				type={`${type}`}
+				required
+				value={`${value}`}
+				onChange={(e) => onChange(e.target.value)}
+			/>
+			<label htmlFor={`${name}`}>
 				<span className="label-name">{children}</span>
 			</label>
 		</div>

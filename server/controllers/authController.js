@@ -31,7 +31,7 @@ exports.signin = catchAsync(async (req, res, next) => {
 	}
 
 	const decoded = await bcrypt.compare(password, user.hashed_password)
-	console.log(decoded)
+
 	if (!decoded) {
 		return next(new AppError("Password do not match.", 400))
 	}

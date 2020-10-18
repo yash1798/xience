@@ -32,18 +32,18 @@
 	font-family: 300;
 	font-size: 4rem;
 	margin: 0 4rem;
-	transform: translateX(-30rem);
 }
 
 .navbar .topbar h3 {
-	transform: translateX(20rem);
 	align-self: flex-end;
+	font-size: 2rem;
+	transform: translateY(0.5rem);
 }
 
 .navbar .cart {
 	width: 3rem;
 	height: 3rem;
-	transform: translateX(-5rem);
+
 	cursor: pointer;
 }
 
@@ -119,4 +119,20 @@
 
 .active {
 	display: block;
+}
+
+/*--------------SEARCH-------------*/
+
+.navbar .search-input {
+	display: flex;
+	max-width: 70rem;
+	min-width: auto;
+	justify-content: center;
+	align-items: center;
+}
+
+.navbar .search-input h2 {
+	margin-right: 1rem;
+	font-weight: 700;
+	align-self: center;
 }

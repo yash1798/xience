@@ -1,12 +1,18 @@
 import React from "react"
-import "./App.css"
+import { Provider } from "react-redux"
+
 import MainRouter from "./MainRouter"
+import store from "./redux/store"
+
+import "./App.css"
 
 function App() {
 	return (
-		<div className="App">
-			<MainRouter />
-		</div>
+		<Provider store={store}>
+			<div className="App">
+				<MainRouter />
+			</div>
+		</Provider>
 	)
 }
 
