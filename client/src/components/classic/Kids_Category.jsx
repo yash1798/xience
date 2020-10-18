@@ -13,14 +13,10 @@ import bottom from "../../assets/img/kids_bottom.jpg"
 import "../../styles/homepage_category.css"
 
 export default class KidsCategory extends Component {
-	constructor(props) {
-		super(props)
-		this.slide = this.slide.bind(this)
-	}
 	slide(y) {
 		y < 0 ? this.slider.slickNext() : this.slider.slickPrev()
 	}
-	componentWillMount() {
+	componentDidMount() {
 		window.addEventListener("wheel", (e) => {
 			this.slide(e.wheelDelta)
 		})

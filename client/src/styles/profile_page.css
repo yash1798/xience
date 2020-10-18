@@ -1,0 +1,29 @@
+.profile-page {
+	margin-top: 10rem;
+	text-align: left;
+	margin-left: 15rem;
+}
+
+.profile-page h1 {
+	font-size: 5rem;
+}
+
+.profile-page .profile-option {
+	margin: 3rem 0;
+}
+
+.profile-page .profile-option .link h1 {
+	font-size: 2rem;
+	font-weight: bold;
+	border-bottom: 2px solid white;
+	width: 15rem;
+	transition: all 0.2s ease;
+}
+
+.profile-page .profile-option h1:hover {
+	border-bottom: 2px solid black;
+}
+
+.profile-page .profile-option p {
+	font-size: 1.4rem;
+}

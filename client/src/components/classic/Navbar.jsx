@@ -1,7 +1,9 @@
 import React, { Component } from "react"
+import { connect } from "react-redux"
 import { Link } from "react-router-dom"
 
 import Input from "../representational/Input"
+import { logout } from "../../redux/actions/userActions"
 
 import menu from "../../assets/svg/menu.svg"
 import cart from "../../assets/svg/cart-bag.svg"
@@ -9,7 +11,7 @@ import cross from "../../assets/svg/cross.svg"
 
 import "../../styles/navbar.css"
 
-export default class Navbar extends Component {
+class Navbar extends Component {
 	renderLinks = (category) => {
 		let element = document.getElementById(`${category}`)
 
@@ -25,6 +27,29 @@ export default class Navbar extends Component {
 	removeSidebar = () => {
 		let element = document.getElementById("sidebar")
 		element.classList.remove("show")
+	}
+
+	renderUserName = () => {
+		if (this.props.userInfo.loggedIn) {
+			return (
+				<>
+					<Link to="/profile" className="link">
+						<h2 style={{ fontSize: "2rem", margin: "0 1rem" }}>
+							{this.props.userInfo.user.payload.name}
+						</h2>
+					</Link>
+					<Link to="/" className="link" onClick={() => this.props.logout()}>
+						<h2 style={{ fontSize: "2rem", margin: "0 1rem" }}>SIGN OUT</h2>
+					</Link>
+				</>
+			)
+		} else {
+			return (
+				<Link className="link" to="/login">
+					<h3>LOG IN</h3>
+				</Link>
+			)
+		}
 	}
 
 	render() {
@@ -101,12 +126,20 @@ export default class Navbar extends Component {
 						<h2>SEARCH</h2>
 						<Input width="10rem" height="4rem" />
 					</div>
-					<Link className="link" to="/login">
-						<h3>LOG IN</h3>
-					</Link>
+					{this.renderUserName()}
 					<img className="cart" src={cart} alt="cart" />
 				</div>
 			</div>
 		)
 	}
 }
+
+const mapStateToProps = ({ userInfo }) => ({
+	userInfo,
+})
+
+const mapDispatchToProps = (dispatch) => ({
+	userSignout: dispatch(logout),
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(Navbar)

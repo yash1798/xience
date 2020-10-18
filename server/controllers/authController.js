@@ -43,6 +43,7 @@ exports.signin = catchAsync(async (req, res, next) => {
 		payload: {
 			token,
 			id: user.id,
+			name: user.name,
 		},
 	})
 })

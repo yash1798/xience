@@ -16,18 +16,26 @@ export const login = (email, password) => async (dispatch) => {
 			body: JSON.stringify(user),
 		}).then((response) => response.json())
 
-		if (!data.errors) {
+		console.log(data)
+
+		if (data.status === "success") {
 			dispatch({
 				type: "USER_LOGIN_SUCCESS",
 				payload: data,
 			})
-		} else if (data.errors) {
+		} else if (data.status === "fail") {
 			throw new Error()
 		}
 	} catch (error) {
 		dispatch({
 			type: "USER_LOGIN_ERROR",
-			payload: data.errors[0],
+			payload: data.payload,
 		})
 	}
+}
+
+export const logout = () => async (dispatch) => {
+	dispatch({
+		type: "USER_LOGOUT",
+	})
 }

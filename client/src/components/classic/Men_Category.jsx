@@ -13,14 +13,10 @@ import bottom from "../../assets/img/HomePage_Male_bottom.jpg"
 import "../../styles/homepage_category.css"
 
 export default class MenCategory extends Component {
-	constructor(props) {
-		super(props)
-		this.slide = this.slide.bind(this)
-	}
 	slide(y) {
 		y < 0 ? this.slider.slickNext() : this.slider.slickPrev()
 	}
-	componentWillMount() {
+	componentDidMount() {
 		window.addEventListener("wheel", (e) => {
 			this.slide(e.wheelDelta)
 		})

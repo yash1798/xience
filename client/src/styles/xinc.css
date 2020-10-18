@@ -7,6 +7,11 @@
 	align-items: center;
 }
 
+.xinc-homepage h5 {
+	font-size: 3rem;
+	margin-bottom: 2rem;
+}
+
 .xinc-homepage .hero-content {
 	display: flex;
 	flex-direction: column;
@@ -30,7 +35,6 @@
 .xinc-homepage h4 {
 	font-size: 2rem;
 	font-family: Rajdhani;
-	transform: translateY(-2rem);
 }
 
 .xinc-homepage .xinc-buttons {

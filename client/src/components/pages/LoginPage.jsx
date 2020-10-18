@@ -8,6 +8,7 @@ import { login } from "../../redux/actions/userActions"
 import Button from "../representational/Button"
 import Input from "../representational/Input"
 import { Redirect } from "react-router-dom"
+import Message from "../representational/Message"
 
 require("dotenv").config()
 
@@ -19,6 +20,18 @@ class LoginPage extends Component {
 
 	handleChange = (input, targetValue) => {
 		this.setState({ [input]: targetValue })
+	}
+
+	renderMessage = () => {
+		if (this.props.userInfo.error) {
+			return (
+				<Message red="true" width="30rem" height="5rem">
+					{this.props.userInfo.error}
+				</Message>
+			)
+		} else {
+			return null
+		}
 	}
 
 	render() {
@@ -36,6 +49,7 @@ class LoginPage extends Component {
 					<div className="login-section">
 						<h1>LOG IN</h1>
 						<p>Already a member here? Sign In now!</p>
+						{this.renderMessage()}
 						<Input
 							onChange={(value) => this.setState({ email: value })}
 							value={this.state.email}
