@@ -1,0 +1,20 @@
+.address-page {
+	display: flex;
+	justify-content: left;
+	margin-top: 5rem;
+}
+
+.address-book {
+	text-align: left;
+	margin-left: 10rem;
+}
+
+.address-page h1 {
+	font-size: 5rem;
+	margin-bottom: 2rem;
+	font-weight: bolder;
+}
+
+.address-page button {
+	margin-top: 2rem;
+}

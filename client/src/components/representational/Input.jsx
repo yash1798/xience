@@ -15,6 +15,7 @@ const Input = ({
 	placeholder = placeholder || ""
 	value = value || ""
 	height = height || "5rem"
+	width = width || "10rem"
 
 	return (
 		<div className="input" style={{ width: `${width}`, height: `${height}` }}>

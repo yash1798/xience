@@ -18,14 +18,15 @@ const userSchema = new mongoose.Schema(
 		tel_number: {
 			type: Number,
 		},
-		addressBook: [
-			{
+		addressBook: {
+			type: {
 				address: { type: String, required: true },
 				city: { type: String, required: true },
 				state: { type: String, required: true },
 				pincode: { type: Number, required: true },
 			},
-		],
+			required: false,
+		},
 
 		isAdmin: {
 			type: Boolean,

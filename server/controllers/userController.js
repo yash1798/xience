@@ -10,6 +10,7 @@ const AppError = require("../utils/errorHandling")
 
 exports.updateUser = catchAsync(async (req, res, next) => {
 	const { userId } = req
+
 	let user = await User.findById(userId)
 
 	if (!user) {
@@ -28,6 +29,7 @@ exports.updateUser = catchAsync(async (req, res, next) => {
 	}
 
 	if (addressBook) {
+		// console.log(addressBook)
 		user.addressBook = addressBook
 	}
 
@@ -38,10 +40,11 @@ exports.updateUser = catchAsync(async (req, res, next) => {
 	if (tel_number) {
 		user.tel_number = tel_number
 	}
+	// console.log(user)
+	const updatedUser = await user.save()
 
-	user = await user.save()
-
-	res.json({ status: "success", payload: user })
+	// console.log(user)
+	res.json({ status: "success", payload: updatedUser })
 })
 
 exports.deleteUser = catchAsync(async (req, res, next) => {
@@ -50,4 +53,14 @@ exports.deleteUser = catchAsync(async (req, res, next) => {
 	await User.findByIdAndDelete(userId)
 
 	res.json({ status: "success", payload: "User deleted." })
+})
+
+exports.getUser = catchAsync(async (req, res, next) => {
+	const { userId } = req
+
+	let user = await User.findById(userId)
+
+	user.hashed_password = ""
+
+	res.json({ status: "success", payload: user })
 })

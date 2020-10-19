@@ -8,7 +8,21 @@ const thunk = require("redux-thunk").default
 
 const logger = createLogger()
 
-const initialState = {}
+if (localStorage.getItem("user")) {
+	var userInfo = {
+		user: JSON.parse(localStorage.getItem("user")),
+		loggedIn: true,
+		loading: false,
+	}
+} else {
+	userInfo = {
+		user: {},
+		loggedIn: false,
+		loading: false,
+	}
+}
+
+const initialState = { userInfo }
 
 const middleware = [logger, thunk]
 

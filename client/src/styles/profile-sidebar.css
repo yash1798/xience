@@ -1,0 +1,18 @@
+.profile-sidebar {
+	display: flex;
+	flex-direction: column;
+	justify-content: left;
+	margin-left: 3rem;
+	align-items: flex-start;
+}
+
+.profile-sidebar h2 {
+	margin-bottom: 1rem;
+	font-size: 3rem;
+	font-weight: bolder;
+	border-bottom: 2px solid white;
+}
+
+.profile-sidebar h2:hover {
+	border-bottom: 2px solid black;
+}

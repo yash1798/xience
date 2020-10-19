@@ -3,7 +3,7 @@ const bodyparser = require("body-parser")
 const mongooseConnect = require("./utils/mongooseConnect")
 const morgan = require("morgan")
 const multer = require("multer")
-
+const cors = require("cors")
 const dotenv = require("dotenv")
 dotenv.config()
 
@@ -22,6 +22,7 @@ const app = express()
 
 app.use("/api/images", express.static("images"))
 
+app.use(cors())
 app.use(bodyparser.json())
 app.use(morgan("dev"))
 app.use(

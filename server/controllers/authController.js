@@ -11,7 +11,7 @@ const AppError = require("../utils/errorHandling")
 exports.signup = catchAsync(async (req, res, next) => {
 	const { name, email, password } = req.body
 	const hashed_password = await bcrypt.hash(password, 8)
-	const user = await User.create({
+	await User.create({
 		email,
 		name,
 		hashed_password,

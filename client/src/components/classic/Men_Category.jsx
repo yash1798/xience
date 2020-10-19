@@ -13,14 +13,19 @@ import bottom from "../../assets/img/HomePage_Male_bottom.jpg"
 import "../../styles/homepage_category.css"
 
 export default class MenCategory extends Component {
-	slide(y) {
-		y < 0 ? this.slider.slickNext() : this.slider.slickPrev()
-	}
 	componentDidMount() {
+		const slide = (y) => {
+			if (this.slider) {
+				return y < 0 ? this.slider.slickNext() : this.slider.slickPrev()
+			} else {
+				return null
+			}
+		}
 		window.addEventListener("wheel", (e) => {
-			this.slide(e.wheelDelta)
+			slide(e.wheelDelta)
 		})
 	}
+
 	settings = {
 		dots: true,
 		infinite: false,

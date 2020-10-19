@@ -13,12 +13,16 @@ import bottom from "../../assets/img/HomePage_Female_bottom.jpg"
 import "../../styles/homepage_category.css"
 
 export default class WomenCategory extends Component {
-	slide(y) {
-		y < 0 ? this.slider.slickNext() : this.slider.slickPrev()
-	}
 	componentDidMount() {
+		const slide = (y) => {
+			if (this.slider) {
+				return y < 0 ? this.slider.slickNext() : this.slider.slickPrev()
+			} else {
+				return null
+			}
+		}
 		window.addEventListener("wheel", (e) => {
-			this.slide(e.wheelDelta)
+			slide(e.wheelDelta)
 		})
 	}
 	settings = {

@@ -12,6 +12,11 @@
 	margin: 3rem 0;
 }
 
+.profile-page .profile-option .link {
+	display: inline-block;
+	width: 10rem;
+}
+
 .profile-page .profile-option .link h1 {
 	font-size: 2rem;
 	font-weight: bold;
