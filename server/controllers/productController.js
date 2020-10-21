@@ -88,16 +88,18 @@ exports.getProductsByQueries = catchAsync(async (req, res, next) => {
 		searchTerm,
 		category,
 		subCategory,
+		genre,
 	} = req.list
 
 	const productArray = await Product.find({
+		genre: { $regex: genre, $options: "i" },
 		category: { $regex: category, $options: "i" },
 		subCategory: { $regex: subCategory, $options: "i" },
 		name: { $regex: searchTerm, $options: "i" },
 	})
 		.sort([[sortBy], [order]])
-		.limit(limit)
-		.skip(skip)
+		.limit(parseInt(limit))
+		.skip(parseInt(skip))
 
 	if (!productArray) {
 		return next(new AppError("Could not find the product."))

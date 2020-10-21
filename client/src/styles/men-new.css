@@ -1,0 +1,18 @@
+.men-new {
+	margin-top: 10rem;
+}
+
+.men-new h1 {
+	font-weight: bolder;
+	font-size: 5rem;
+}
+
+.men-new .product-container {
+	margin: 3rem auto;
+	width: 80vw;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: center;
+}

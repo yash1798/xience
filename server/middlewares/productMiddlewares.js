@@ -47,6 +47,7 @@ const attachQueries = (req, res, next) => {
 		searchTerm,
 		category,
 		subCategory,
+		genre,
 	} = req.query
 
 	sortBy = sortBy || "_id"
@@ -57,6 +58,7 @@ const attachQueries = (req, res, next) => {
 
 	category = category || ""
 	subCategory = subCategory || ""
+	genre = genre || ""
 
 	list = {
 		sortBy,
@@ -66,6 +68,7 @@ const attachQueries = (req, res, next) => {
 		searchTerm,
 		category,
 		subCategory,
+		genre,
 	}
 
 	req.list = list
