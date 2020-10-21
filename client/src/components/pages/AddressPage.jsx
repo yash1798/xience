@@ -65,7 +65,7 @@ class AddressPage extends Component {
 					"Content-Type": "application/json",
 				},
 			}).then((response) => response.json())
-			console.log(data)
+
 			if (data.status === "fail") {
 				return this.setState({ errors: data.payload, loading: false })
 			}

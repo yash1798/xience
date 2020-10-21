@@ -29,7 +29,6 @@ exports.updateUser = catchAsync(async (req, res, next) => {
 	}
 
 	if (addressBook) {
-		// console.log(addressBook)
 		user.addressBook = addressBook
 	}
 

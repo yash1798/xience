@@ -12,8 +12,8 @@ const productCreationRules = () => {
 		body("name").notEmpty().withMessage("Please enter the product's name."),
 		body("description")
 			.notEmpty()
-			.isLength({ max: 100 })
-			.withMessage("Please enter a valid e-mail."),
+			.isLength({ max: 200 })
+			.withMessage("Product description can be max 200 characters."),
 		body("category")
 			.notEmpty()
 			.withMessage("Please enter the product's category."),
@@ -39,7 +39,6 @@ const validate = (req, res, next) => {
 }
 
 const attachQueries = (req, res, next) => {
-	console.log(req.query)
 	let {
 		sortBy,
 		order,

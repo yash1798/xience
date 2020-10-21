@@ -27,11 +27,12 @@
 	margin-left: 1rem;
 }
 
-.navbar .topbar .logo {
+.navbar .topbar .link .logo {
 	font-family: Prata;
 	font-family: 300;
 	font-size: 4rem;
 	margin: 0 4rem;
+	height: 4rem;
 }
 
 .navbar .topbar h3 {
@@ -133,7 +134,7 @@
 	width: 70rem;
 	min-width: 20rem;
 	justify-content: center;
-	align-items: center;
+	align-items: flex-end;
 }
 
 .navbar .search-input h2 {

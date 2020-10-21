@@ -13,6 +13,10 @@ const productSchema = new mongoose.Schema(
 		image: {
 			type: String,
 		},
+		genre: {
+			type: String,
+			required: true,
+		},
 		category: {
 			type: String,
 			required: true,

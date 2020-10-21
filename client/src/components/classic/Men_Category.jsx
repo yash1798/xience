@@ -48,18 +48,21 @@ export default class MenCategory extends Component {
 						header="NEW IN"
 						text="Checkout this month's latest arrivals from us."
 						theme="text-white"
+						link="men/new"
 					/>
 					<CategoryCollection
 						picture={mid}
 						header="COLLECTION"
 						text="Dive deeper into our collection."
 						theme="text-white"
+						link="men/collection"
 					/>
 					<CategoryCollection
 						picture={bottom}
 						header="ACCESSORIES"
 						text="Watches, shoes, perfumes and what-not!"
 						theme="text-white"
+						link="men/accessories"
 					/>
 				</Slider>
 			</div>

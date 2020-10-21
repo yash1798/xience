@@ -6,9 +6,17 @@ const catchAsync = require("../utils/catchAsync")
 const AppError = require("../utils/errorHandling")
 
 exports.createProduct = catchAsync(async (req, res, next) => {
-	const { name, description, category, subCategory, price, stock } = req.body
+	const {
+		name,
+		description,
+		category,
+		subCategory,
+		price,
+		stock,
+		genre,
+	} = req.body
 
-	await Product.create({
+	const product = await Product.create({
 		name,
 		description,
 		genre,
@@ -18,7 +26,7 @@ exports.createProduct = catchAsync(async (req, res, next) => {
 		stock,
 	})
 
-	res.json({ status: "success", payload: "Product created." })
+	res.json({ status: "success", payload: product._id })
 })
 
 exports.addImage = catchAsync(async (req, res, next) => {
