@@ -5,11 +5,12 @@ import "../../styles/product-card.css"
 
 const ProductCard = ({ product, category }) => {
 	return (
-		<Link className="link" to={`${product._id}`}>
+		<Link className="link" to={`/${product._id}`}>
 			<div className="product-card">
 				<img
 					className="product-card-img"
 					src={`${process.env.REACT_APP_API_URL}/images/${product._id}.jpeg`}
+					alt="product"
 				/>
 				<div className="product-card-info">
 					<h3 className="product-card-category">{category}</h3>

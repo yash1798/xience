@@ -22,7 +22,13 @@ if (localStorage.getItem("user")) {
 	}
 }
 
-const initialState = { userInfo }
+if (localStorage.getItem("cart")) {
+	var cart = JSON.parse(localStorage.getItem("cart"))
+} else {
+	cart = []
+}
+
+const initialState = { userInfo, cart }
 
 const middleware = [logger, thunk]
 

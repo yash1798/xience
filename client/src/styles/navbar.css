@@ -142,3 +142,17 @@
 	font-weight: 700;
 	align-self: center;
 }
+
+/*--------------CART-------------*/
+.navbar .cart-container {
+	position: relative;
+}
+
+.navbar .cart-number {
+	position: absolute;
+	z-index: 100;
+	right: 40%;
+	top: 25%;
+	font-size: 1.5rem;
+	font-weight: bolder;
+}

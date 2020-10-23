@@ -1,0 +1,18 @@
+.cart-page {
+	width: 80vw;
+	margin: 0 auto;
+	margin-top: 5rem;
+}
+
+.cart-page h1 {
+	font-weight: bolder;
+	font-size: 5rem;
+	margin-bottom: 5rem;
+}
+
+.cart-page .product-array {
+	display: flex;
+	flex-direction: row;
+	justify-content: left;
+	flex-wrap: wrap;
+}

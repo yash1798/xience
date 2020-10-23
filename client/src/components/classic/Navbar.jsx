@@ -52,6 +52,13 @@ class Navbar extends Component {
 		}
 	}
 
+	renderCartNumber = () => {
+		const { cart } = this.props
+		if (cart.length > 0) {
+			return cart.length
+		} else return null
+	}
+
 	render() {
 		return (
 			<div className="navbar">
@@ -127,15 +134,21 @@ class Navbar extends Component {
 						<Input width="10rem" height="4rem" />
 					</div>
 					{this.renderUserName()}
-					<img className="cart" src={cart} alt="cart" />
+					<div className="cart-container">
+						<Link to="/cart" className="link">
+							<img className="cart" src={cart} alt="cart" />
+							<span className="cart-number">{this.renderCartNumber()}</span>
+						</Link>
+					</div>
 				</div>
 			</div>
 		)
 	}
 }
 
-const mapStateToProps = ({ userInfo }) => ({
+const mapStateToProps = ({ userInfo, cart }) => ({
 	userInfo,
+	cart,
 })
 
 const mapDispatchToProps = (dispatch) => ({

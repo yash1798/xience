@@ -1,0 +1,22 @@
+.product-showcase {
+	margin: 10rem auto;
+	width: 90vw;
+}
+
+.product-showcase h1 {
+	margin: 3rem auto;
+	font-size: 5rem;
+	font-weight: bolder;
+	text-transform: uppercase;
+}
+
+.product-showcase img {
+	margin: 2rem auto;
+	max-width: 50vw;
+	height: auto;
+}
+
+.product-showcase .category-collection-product-array {
+	display: flex;
+	flex-wrap: wrap;
+}

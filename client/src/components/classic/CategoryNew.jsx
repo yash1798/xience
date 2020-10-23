@@ -17,7 +17,7 @@ class CategoryNew extends Component {
 
 	async componentDidMount() {
 		const data = await fetch(
-			`${process.env.REACT_APP_API_URL}/product/getProducts?genre=${this.props.genre}&sortBy=createdAt&order=desc&limit=12`,
+			`${process.env.REACT_APP_API_URL}/product/getProducts?genre=${this.props.genre}&sortBy=updatedAt&order=desc&limit=12`,
 			{
 				method: "GET",
 				headers: {
