@@ -1,7 +1,7 @@
 .profile-page {
-	margin-top: 7rem;
+	margin: 7rem auto;
 	text-align: left;
-	margin-left: 15rem;
+	width: 70vw;
 }
 
 .profile-page h1 {

@@ -8,10 +8,15 @@ import { logout } from "../../redux/actions/userActions"
 import menu from "../../assets/svg/menu.svg"
 import cart from "../../assets/svg/cart-bag.svg"
 import cross from "../../assets/svg/cross.svg"
+import right_arrow from "../../assets/svg/right-arrow.svg"
 
 import "../../styles/navbar.css"
 
 class Navbar extends Component {
+	state = {
+		searchTerm: "",
+	}
+
 	renderLinks = (category) => {
 		let element = document.getElementById(`${category}`)
 
@@ -35,10 +40,14 @@ class Navbar extends Component {
 				<>
 					<Link to="/profile" className="link">
 						<h2 style={{ fontSize: "2rem", margin: "0 1rem" }}>
-							{this.props.userInfo.user.payload.name}
+							{this.props.userInfo.user.name}
 						</h2>
 					</Link>
-					<Link to="/" className="link" onClick={() => this.props.logout()}>
+					<Link
+						to="/"
+						className="link"
+						onClick={() => this.props.userSignout()}
+					>
 						<h2 style={{ fontSize: "2rem", margin: "0 1rem" }}>SIGN OUT</h2>
 					</Link>
 				</>
@@ -131,7 +140,22 @@ class Navbar extends Component {
 					</Link>
 					<div className="search-input">
 						<h2>SEARCH</h2>
-						<Input width="10rem" height="4rem" />
+						<Input
+							onChange={(value) => this.setState({ searchTerm: value })}
+							value={this.state.searchTerm}
+							width="10rem"
+							height="4rem"
+						/>
+						<a
+							className="link"
+							href={
+								this.state.searchTerm === ""
+									? `/search/no-search-term`
+									: `/search/${this.state.searchTerm}`
+							}
+						>
+							<img src={right_arrow} alt="arrow" />
+						</a>
 					</div>
 					{this.renderUserName()}
 					<div className="cart-container">
@@ -152,7 +176,7 @@ const mapStateToProps = ({ userInfo, cart }) => ({
 })
 
 const mapDispatchToProps = (dispatch) => ({
-	userSignout: dispatch(logout),
+	userSignout: () => dispatch(logout()),
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(Navbar)

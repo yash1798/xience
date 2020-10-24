@@ -30,7 +30,7 @@ class AccessPage extends Component {
 				{
 					method: "PUT",
 					headers: {
-						Authorization: `Bearer ${this.props.userInfo.user.payload.token}`,
+						Authorization: `Bearer ${this.props.userInfo.user.token}`,
 						Accept: "application/json",
 						"Content-Type": "application/json",
 					},
@@ -56,7 +56,7 @@ class AccessPage extends Component {
 			var data = await fetch(`${process.env.REACT_APP_API_URL}/user/getUser`, {
 				method: "GET",
 				headers: {
-					Authorization: `Bearer ${this.props.userInfo.user.payload.token}`,
+					Authorization: `Bearer ${this.props.userInfo.user.token}`,
 					Accept: "application/json",
 					"Content-Type": "application/json",
 				},

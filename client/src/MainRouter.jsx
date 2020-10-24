@@ -12,6 +12,9 @@ import ProfilePage from "./components/pages/ProfilePage"
 import MenCollectionPage from "./components/pages/MenCollectionPage"
 import ProductPage from "./components/pages/ProductPage"
 import CartPage from "./components/pages/CartPage"
+import SearchPage from "./components/pages/SearchPage"
+import RegisterPage from "./components/pages/RegisterPage"
+import AdminPage from "./components/pages/AdminPage"
 
 const MainRouter = () => {
 	return (
@@ -19,15 +22,17 @@ const MainRouter = () => {
 			<Switch>
 				<Route exact path="/" component={HomePage} />
 				<Route exact path="/login" component={LoginPage} />
+				<Route exact path="/register" component={RegisterPage} />
 				<Route exact path="/profile" component={ProfilePage} />
 				<Route exact path="/profile/address" component={AddressPage} />
 				<Route exact path="/profile/access" component={AccessPage} />
 				<Route exact path="/profile/personal" component={PersonalPage} />
+				<Route exact path="/profile/admin" component={AdminPage} />
 				<Route exact path="/cart" component={CartPage} />
 				<Route exact path="/men/new" component={MenNewPage} />
 				<Route exact path="/women/new" component={WomenNewPage} />
 				<Route exact path="/men/collection" component={MenCollectionPage} />
-
+				<Route exact path="/search/:searchTerm" component={SearchPage} />
 				<Route exact path="/:productId" component={ProductPage} />
 			</Switch>
 		</BrowserRouter>

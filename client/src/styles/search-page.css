@@ -1,0 +1,16 @@
+.search-page {
+	width: 90vw;
+	margin: 0 auto;
+	margin-top: 10rem;
+}
+
+.search-page h1 {
+	font-size: 5rem;
+	font-weight: bold;
+}
+
+.search-page .product-array {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: left;
+}

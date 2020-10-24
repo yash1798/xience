@@ -18,3 +18,9 @@ export const reduceCount = (productId) => (dispatch) => {
 		payload: productId,
 	})
 }
+
+export const clearCart = (productId) => (dispatch) => {
+	dispatch({
+		type: "CART_CLEAR",
+	})
+}

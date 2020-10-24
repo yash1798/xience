@@ -1,7 +1,9 @@
 .cart-page {
-	width: 80vw;
+	width: 90vw;
+
 	margin: 0 auto;
 	margin-top: 5rem;
+	margin-bottom: 5rem;
 }
 
 .cart-page h1 {
@@ -15,4 +17,9 @@
 	flex-direction: row;
 	justify-content: left;
 	flex-wrap: wrap;
+	height: auto;
+}
+
+.cart-page .cart-continue {
+	margin-top: 10rem;
 }

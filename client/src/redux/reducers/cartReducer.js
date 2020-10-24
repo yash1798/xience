@@ -40,6 +40,12 @@ export const cartReducer = (state = {}, action) => {
 			}
 			localStorage.setItem("cart", JSON.stringify(cart))
 			return cart
+
+		case "CART_CLEAR":
+			cart = []
+			localStorage.setItem("cart", JSON.stringify(cart))
+			return cart
+
 		default:
 			return state
 	}

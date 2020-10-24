@@ -3,6 +3,7 @@ import Navbar from "../classic/Navbar"
 
 import "../../styles/profile_page.css"
 import { Link } from "react-router-dom"
+import { connect } from "react-redux"
 
 export class ProfilePage extends Component {
 	render() {
@@ -47,10 +48,22 @@ export class ProfilePage extends Component {
 							days.
 						</p>
 					</div>
+					{this.props.isAdmin ? (
+						<div className="profile-option">
+							<Link className="link" to="/profile/admin">
+								<h1>Admin Area</h1>
+							</Link>
+							<p>Hi, Admin. Manage the products and users here.</p>
+						</div>
+					) : null}
 				</div>
 			</>
 		)
 	}
 }
 
-export default ProfilePage
+const mapStateToProps = ({ userInfo }) => ({
+	isAdmin: userInfo.user.isAdmin,
+})
+
+export default connect(mapStateToProps)(ProfilePage)

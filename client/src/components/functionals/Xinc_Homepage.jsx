@@ -16,7 +16,7 @@ class XincHomepage extends Component {
 					outline="wo"
 					link="profile"
 				>
-					{this.props.userInfo.user.payload.name}
+					{this.props.userInfo.user.name}
 				</Button>
 			)
 		} else {
