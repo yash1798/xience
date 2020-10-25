@@ -15,6 +15,8 @@ import CartPage from "./components/pages/CartPage"
 import SearchPage from "./components/pages/SearchPage"
 import RegisterPage from "./components/pages/RegisterPage"
 import AdminPage from "./components/pages/AdminPage"
+import AdminUserPage from "./components/pages/AdminUserPage"
+import AdminUserIdPage from "./components/pages/AdminUserIdPage"
 
 const MainRouter = () => {
 	return (
@@ -28,6 +30,12 @@ const MainRouter = () => {
 				<Route exact path="/profile/access" component={AccessPage} />
 				<Route exact path="/profile/personal" component={PersonalPage} />
 				<Route exact path="/profile/admin" component={AdminPage} />
+				<Route
+					exact
+					path="/profile/admin/manage-users"
+					component={AdminUserPage}
+				/>
+				<Route exact path="/user/:userId" component={AdminUserIdPage} />
 				<Route exact path="/cart" component={CartPage} />
 				<Route exact path="/men/new" component={MenNewPage} />
 				<Route exact path="/women/new" component={WomenNewPage} />

@@ -1,0 +1,64 @@
+.admin-user-page {
+	margin: 7rem auto;
+	width: 70vw;
+}
+
+.admin-user-page h1 {
+	font-size: 5rem;
+	text-align: left;
+}
+
+.admin-user-page .admin-user-option {
+	margin: 3rem 0;
+}
+
+.admin-user-page .admin-user-option h1 {
+	font-size: 2rem;
+	font-weight: bold;
+	border-bottom: 2px solid white;
+	transition: all 0.2s ease;
+	width: 15rem;
+	cursor: pointer;
+}
+
+.admin-user-page .admin-user-option h1:hover {
+	border-bottom: 2px solid black;
+}
+
+.admin-user-page .admin-user-option p {
+	font-size: 1.4rem;
+	text-align: left;
+}
+
+.admin-user-page .admin-user-option .option-input {
+	margin: 1rem 0;
+	text-align: left;
+	display: none;
+}
+
+.admin-user-page .option-result {
+	text-align: left;
+}
+
+.admin-user-page .option-result h1 {
+	font-size: 1.5rem;
+	font-weight: 700;
+	width: 10rem;
+	border-bottom: none;
+	width: 100%;
+	margin-bottom: 1rem;
+}
+
+.admin-user-page .option-result h1:hover {
+	cursor: auto;
+	border-bottom: none;
+}
+
+.admin-user-page .option-result span {
+	font-size: 1.4rem;
+	font-weight: 300;
+}
+
+.active {
+	display: block !important;
+}

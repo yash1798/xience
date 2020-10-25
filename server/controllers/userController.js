@@ -5,6 +5,7 @@ const dotenv = require("dotenv")
 dotenv.config()
 
 const User = require("../models/userModel")
+const Order = require("../models/orderModel")
 const catchAsync = require("../utils/catchAsync")
 const AppError = require("../utils/errorHandling")
 
@@ -62,4 +63,65 @@ exports.getUser = catchAsync(async (req, res, next) => {
 	user.hashed_password = ""
 
 	res.json({ status: "success", payload: user })
+})
+
+exports.getUserByQueries = catchAsync(async (req, res, next) => {
+	const { email, orderId, userId } = req.query
+
+	if (email) {
+		const user = await User.findOne({ email })
+		if (!user) {
+			return next(new AppError("User not found.", 404))
+		}
+		res.json({
+			status: "success",
+			payload: {
+				name: user.name,
+				email: user.email,
+				userId: user._id,
+			},
+		})
+	}
+	if (userId) {
+		const user = await User.findById(userId)
+		if (!user) {
+			return next(new AppError("User not found.", 404))
+		}
+		res.json({
+			status: "success",
+			payload: {
+				name: user.name,
+				email: user.email,
+				userId: user._id,
+			},
+		})
+	}
+	if (orderId) {
+		const order = await Order.find({ user: userId })
+		if (!order) {
+			return next(new AppError("Order not found.", 404))
+		}
+		res.json({
+			status: "success",
+			payload: {
+				name: user.name,
+				email: user.email,
+				userId: user._id,
+			},
+		})
+	}
+})
+
+exports.getUserById = catchAsync(async (req, res, next) => {
+	const { userId } = req.params
+
+	const user = await User.findById(userId)
+
+	if (!user) {
+		return next(new AppError("Order not found.", 404))
+	}
+
+	if (user) {
+		res.json({ status: "success", payload: user })
+	}
 })

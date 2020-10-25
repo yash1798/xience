@@ -1,0 +1,19 @@
+.admin-userid-page {
+	margin: 7rem auto;
+	width: 80vw;
+	text-align: left;
+}
+
+.admin-userid-page h1:first-child {
+	font-size: 5rem;
+}
+
+.admin-userid-page h1 {
+	font-size: 2rem;
+	font-weight: 700;
+	margin: 2rem 0;
+}
+
+.admin-userid-page h1 span {
+	font-weight: 500;
+}
