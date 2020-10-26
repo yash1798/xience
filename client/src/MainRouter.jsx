@@ -17,6 +17,8 @@ import RegisterPage from "./components/pages/RegisterPage"
 import AdminPage from "./components/pages/AdminPage"
 import AdminUserPage from "./components/pages/AdminUserPage"
 import AdminUserIdPage from "./components/pages/AdminUserIdPage"
+import AdminProductPage from "./components/pages/AdminProductPage"
+import AdminCreateProduct from "./components/pages/AdminCreateProduct"
 
 const MainRouter = () => {
 	return (
@@ -34,6 +36,16 @@ const MainRouter = () => {
 					exact
 					path="/profile/admin/manage-users"
 					component={AdminUserPage}
+				/>
+				<Route
+					exact
+					path="/profile/admin/manage-products"
+					component={AdminProductPage}
+				/>
+				<Route
+					exact
+					path="/profile/admin/product/create"
+					component={AdminCreateProduct}
 				/>
 				<Route exact path="/user/:userId" component={AdminUserIdPage} />
 				<Route exact path="/cart" component={CartPage} />

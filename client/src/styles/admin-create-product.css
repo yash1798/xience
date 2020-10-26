@@ -1,0 +1,33 @@
+.admin-create-product {
+	width: 70vw;
+	margin: 7rem auto;
+	text-align: left;
+	height: 110vh;
+}
+
+.admin-create-product h1 {
+	font-size: 5rem;
+	margin: 2rem 0;
+}
+
+.admin-create-product #label {
+	font-size: 1.5rem;
+	margin-left: 1rem;
+	margin-right: 2rem;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+}
+
+textarea {
+	outline: none;
+	font-size: 2rem;
+}
+
+#label-file {
+	font-size: 1.5rem;
+	margin-right: 1.5rem;
+}
+
+#myfile {
+	margin: 3rem 0;
+}

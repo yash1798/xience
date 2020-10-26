@@ -1,0 +1,56 @@
+.admin-product-page {
+	width: 70vw;
+	margin: 7rem auto;
+	text-align: left;
+}
+
+.admin-product-page h1 {
+	font-size: 5rem;
+}
+
+.admin-product-page .admin-product-option {
+	margin: 3rem 0;
+}
+
+.admin-product-page .admin-product-option h1 {
+	font-size: 2rem;
+	font-weight: 700;
+	border-bottom: 2px solid white;
+	width: 20rem;
+	transition: all 0.2s ease;
+	cursor: pointer;
+}
+
+.admin-product-page .admin-product-option h1:hover {
+	border-bottom: 2px solid black;
+}
+
+.admin-product-page .admin-product-option p {
+	font-size: 1.5rem;
+}
+
+.admin-product-page .admin-product-option .option-input {
+	display: none;
+}
+
+.admin-product-page .option-result {
+	margin: 1rem 0;
+	width: 100%;
+}
+
+.admin-product-page .option-result h1 {
+	font-size: 2rem;
+	margin-bottom: 1rem;
+	border: none;
+	cursor: auto;
+	width: 100%;
+}
+
+.admin-product-page .option-result h1:hover {
+	border: none;
+}
+
+.admin-product-page .option-result span {
+	font-size: 1.8rem;
+	font-weight: 300;
+}
