@@ -76,8 +76,6 @@ export class AdminCreateProduct extends Component {
 			}
 		).then((response) => response.json())
 
-		console.log(data1)
-
 		if (data1.status === "success") {
 			this.setState({ redirect: true })
 		}

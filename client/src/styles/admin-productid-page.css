@@ -1,0 +1,22 @@
+.admin-productid-page {
+	margin: 7rem auto;
+	width: 70vw;
+}
+
+.admin-productid-page h1 {
+	font-size: 5rem;
+	text-align: left;
+}
+
+.admin-productid-page h2 {
+	text-align: left;
+}
+
+.admin-productid-page .admin-buttons {
+	display: flex;
+	flex-direction: column;
+	height: 8rem;
+	justify-content: space-between;
+	align-items: flex-start;
+	margin: 3rem 0;
+}

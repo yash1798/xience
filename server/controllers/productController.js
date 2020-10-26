@@ -77,6 +77,8 @@ exports.deleteProduct = catchAsync(async (req, res, next) => {
 	if (!product) {
 		return next(new AppError("Product not found.", 404))
 	}
+
+	res.json({ status: "success", payload: "Product Deleted Successfully." })
 })
 
 exports.getProductsByQueries = catchAsync(async (req, res, next) => {
